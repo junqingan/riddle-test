@@ -43,6 +43,65 @@
         <div class="content">
             <!-- 工作经验 -->
             <div class="con-l">
+                <div class="ziwo">
+                    <h3>自我评价</h3>
+                    <p>本人积极好学，对前端技术有浓厚的兴趣，有较强的自学能力及沟通表达能力，配合团队及吃苦耐劳的工作精神。也一直保持对自身的技能不断尝试和突破；喜欢研究html5及前端领域的新技术；</p>
+                </div>
+                <div class="qiuzhi">
+                    <h3>求职意向</h3>
+                    <ul>
+                        <Li> 工作性质： 全职</Li>
+                        <Li>期望职业： WEB前端开发</Li>
+                        <Li>期望行业： 互联网/电子商务</Li>
+                        <Li>工作地区： 上海</Li>
+                        <Li>期望月薪： 12k</Li>
+                    </ul>
+                </div>
+                <div class="jineng">
+                    <h3>技能水平</h3>
+                    <ul>
+                        <Li class="ps">
+                            <span class="bg"></span>
+                            <span class="txt">Photoshop</span>
+                            <code></code>
+                        </Li>
+                        <Li class="h5">
+                            <span class="bg"></span>
+                            <span class="txt">Html/Html5</span>
+                            <code></code>
+                        </Li>
+                        <li class="css">
+                            <span class="bg"></span>
+                            <span class="txt">CSS/CSS3</span>
+                            <code></code>
+                        </li>
+                        <Li class="less">
+                            <span class="bg"></span>
+                            <span class="txt">Less/Sass</span>
+                            <code></code>
+                        </Li>
+                        <Li class="js">
+                            <span class="bg"></span>
+                            <span class="txt">JavaScript</span>
+                            <code></code>
+                        </Li>
+                        <Li class="jq">
+                            <span class="bg"></span>
+                            <span class="txt">Jquery</span>
+                            <code></code>
+                        </Li>
+                        <Li class="git">
+                            <span class="bg"></span>
+                            <span class="txt">版本控制系统(Git)</span>
+                            <code></code>
+                        </Li>
+                        <Li class="gulp">
+                            <span class="bg"></span>
+                            <span class="txt">Gulp/webpack</span>
+                            <code></code>
+                        </Li>
+                    </ul>
+                </div>
             </div>
             <div class="con-r">
                 <div class="work-r">
@@ -153,6 +212,16 @@
                     'top': top
                 })
             };
+
+
+            var jinengLi = $('.jineng ul').children("li");
+            jinengLi.hover(function () {
+                var codeHtml = $(this).find('.bg').width();
+                var ParseInt =parseInt(codeHtml/$(this).width()*100)
+                $(this).find('code').html(ParseInt+'%');
+            }, function () {
+                $(this).find('code').html('')
+            });
         });
     </script>
 </body>
