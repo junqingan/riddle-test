@@ -220,8 +220,13 @@
                 var codeHtml = $(this).find('.bg').width();
                 var ParseInt =parseInt(codeHtml/$(this).width()*100)
                 $(this).find('code').html(ParseInt+'%');
+                $(this).find('code').stop().animate({
+                    'left':codeHtml+10
+                }, 300, 'linear')
             }, function () {
-                $(this).find('code').html('')
+                $(this).find('code').stop().animate({
+                    'left':'380px'
+                }, 1500, 'linear')
             });
         });
     </script>
