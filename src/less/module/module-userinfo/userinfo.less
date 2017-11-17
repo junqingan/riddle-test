@@ -1,0 +1,64 @@
+.userinfo{
+    .cf;
+    width: 1200px;
+    height: 260px;
+    overflow: hidden;
+    background: #5a5a5a;
+    color: @white;
+}
+.userinfo-l{
+    .fl;
+    width: 280px;
+    height: 260px;
+    overflow: hidden;
+    .userimg{
+        display: block;
+        width: 160px;
+        height: 160px;
+        margin: 20px auto 0; 
+        overflow: hidden;
+       img{
+           display: block;
+           width: 100%;
+           height: 100%;
+           .border-radius(50%);
+       }
+    }
+    .user-phone{
+        width: 280px;
+        height: 70px;
+        line-height: 70px;
+        font-size: 24px;
+        text-align: center;
+    }
+}
+.userinfo-r{
+    .fr;
+    width: 800px;
+    height: 260px;
+    overflow: hidden;
+    .user-info{
+        height: 30px;
+        line-height: 30px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        font-size: 24px;
+    }
+    .user-mation{
+        .cf;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        -khtml-user-select: none;
+        user-select: none;
+        li{
+            .fl;
+            height: 24px;
+            line-height: 24px;
+            font-size: 20px;
+            min-width: 400px;
+            margin-top: 5px;
+            cursor: default;
+        }
+    }
+}

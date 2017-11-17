@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/home.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="nav">
+            <h2>
+                <i></i>安俊卿——WEB前端开发</h2>
+        </div>
+        <div class="userinfo">
+            <div class="userinfo-l">
+                <a class="userimg" href="javascript:;">
+                    <img src="http://qzapp.qlogo.cn/qzapp/100414805/68E1CB2AAB69BA951F9E05FA09C3A121/100" alt="">
+                </a>
+                <p class="user-phone">
+                    <span>手机：</span> 17721023901</p>
+            </div>
+            <div class="userinfo-r">
+                <h3 class="user-info">基本资料</h3>
+                <ul class="user-mation">
+                    <li>姓名：安俊卿</li>
+                    <li>性别：男</li>
+                    <li>学历：大专</li>
+                    <li>专业：动漫设计与制作</li>
+                    <li>毕业院校：商丘职业技术学院</li>
+                    <li>籍贯：河南南阳</li>
+                    <li>出生年月：1990/01/08</li>
+                    <li>婚姻状况：未婚</li>
+                    <li>邮箱：an_xmin@163.com</li>
+                    <li>QQ：738418625</li>
+                    <li>Github：https://github.com/lonelyAnn</li>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <!-- 工作经验 -->
+            <div class="con-l">
+            </div>
+            <div class="con-r">
+                <div class="work-r">
+                    <div class="W-work-left">
+                        <div class="W-jing-nr">
+                            <h3>工作经历</h3>
+                            <div class="W-jing-nr-parent">
+                                <div class="W-time">
+                                    <span>2017</span>
+                                    <i>year</i>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="W-tim-ul">
+                            <li class="W-li-top W-li-top-diyi">
+                                <em>2016</em>
+                                <i>04月</i>
+                                <b></b>
+                                <span class="yuandian"></span>
+                            </li>
+                            <li class="W-li-top W-margin-top1">
+                                <em>2012</em>
+                                <i>08月</i>
+                                <b></b>
+                                <span class="yuandian"></span>
+                            </li>
+                            <li class="W-li-top W-margin-top2">
+                                <em>2012</em>
+                                <i>06月</i>
+                                <b></b>
+                                <span class="yuandian"></span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="W-work-right">
+                        <ul>
+                            <li>
+                                <p class="W-jie1">就职于
+                                    <strong>上海聚力传媒技术有限公司</strong>
+                                </p>
+                                <p class="W-jie2">
+                                    <span>&lt;研发中心/前端开发工程师&gt;</span>
+                                    负责PC端/移动端页面制作。PSD切图后构建页面框架 利用HTML、JS、CSS3书写前端功能，让页面更充实丰富。 2017年10月31日从该公司离职。
+                                </p>
+                            </li>
+                            <li class="W-time-top">
+                                <p class="W-jie1">就职于
+                                    <strong>上海兼光食品有限公司</strong>
+                                    <p class="W-jie2">
+                                        <span>&lt;平面设计/后转前端开发&gt;</span>
+                                        负责公司店面平面设计工作，后转入网站开发组。负责设计、切图，利用HTML、JS、CSS3渲染静态页面； 2015年11月从该公司离职。
+                                    </p>
+                                </p>
+                            </li>
+                            <li class="W-time-top">
+                                <p class="W-jie1">毕业于
+                                    <strong>商丘职业技术学院</strong>
+                                </p>
+                                <p class="W-jie2">
+                                    <span>&lt;大专&gt;</span>
+                                    专业：动漫设计与制作
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="../js/home.js"></script>
+    <script>
+        $(document).ready(function () {
+            // 工作经验hover效果
+            $('.W-tim-ul,.W-work-right ul').find('li').hover(function () {
+                $('.W-jie1').css('color', '#666');
+                $('.W-jie1').eq($(this).index()).css('color', '#6bc30d');
+                if ($(this).index() == 0) {
+                    xuanz1(0, '57px')
+                } else if ($(this).index() == 1) {
+                    xuanz1(1, '160px')
+                } else if ($(this).index() == 2) {
+                    xuanz1(2, '260px')
+                }
+            }, function () {
+                $('.W-jie1').css('color', '#666');
+                if ($(this).index() == 0) {
+                    xuanz2(0, '63px')
+                } else if ($(this).index() == 1) {
+                    xuanz2(1, '165px')
+                } else if ($(this).index() == 2) {
+                    xuanz2(2, '265px')
+                }
+            });
+
+            function xuanz1(n, top) {
+                $('.W-tim-ul li').find('span').eq(n).stop().animate({
+                    'border-width': '8px',
+                    'right': '-20px',
+                    'top': top
+                }, 100, 'linear')
+            }
+
+            function xuanz2(n, top) {
+                $('.W-tim-ul li').find('span').eq(n).stop().animate({
+                    'border-width': '2px',
+                    'right': '-14px',
+                    'top': top
+                })
+            };
+        });
+    </script>
+</body>
+
+</html>
