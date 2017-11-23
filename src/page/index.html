@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel='icon' href='../../bitbug_favicon.ico' type=‘image/x-ico’ /> 
+    <link rel='icon' href='../../bitbug_favicon.ico' type=‘image/x-ico’ />
     <title>安俊卿_WEB前端开发</title>
     <link rel="stylesheet" href="../css/home.css">
 </head>
@@ -105,6 +105,7 @@
                 </div>
             </div>
             <div class="con-r">
+                <!-- 工作经验 -->
                 <div class="work-r">
                     <div class="W-work-left">
                         <div class="W-jing-nr">
@@ -169,67 +170,67 @@
                         </ul>
                     </div>
                 </div>
+                <!-- 项目经验 -->
+                <div class="project-experience">
+                    <div class="project-l">
+                        <h3>项目经验</h3>
+                    </div>
+                    <div class="project-r">
+                        <div class="work-exp-list">
+                            <i class="work-exp-list-ico"></i>2016/4 - 2017/10
+                        </div>
+                        <div class="list-con">
+                            <h3>PPTV主站页面维护</h3>
+                            <p>责任描述：归属敏捷开发团队，负责主站所有的线上页面bug，样式调整，及页面架构设计。</p>
+                        </div>
+                        <div class="work-exp-list">
+                                <i class="work-exp-list-ico"></i>2016/05 - 2017/10
+                            </div>
+                            <div class="list-con">
+                                <h3>聚力AE专题页面制作</h3>
+                                <p>责任描述：主要负责接洽相关部门分配的相关专题页面展示及功能实现；如：nubia、大众、美国旅游局、PP商城等；</p>
+                                <p>项目简介：该项目为相关销售或商城部门业务，该业务专题页面主要为客户提供产品或相关需求展示及广告业务投放；</p>
+                            </div>
+                        <div class="work-exp-list">
+                            <i class="work-exp-list-ico"></i>2017/06 - 2017/10
+                        </div>
+                        <div class="list-con">
+                            <h3>CMS后台管理系统升级改版</h3>
+                            <p>责任描述：主要负责该管理系统的静态页面渲染及相关交互开发</p>
+                            <p>项目简介：改项目是北京CMS部门对管理系统升级改版，因该部门前端人手紧缺被借调协助开发，项目期间主要负责前端切图；该项目主要使用技术：webpack、Less、Css3等相关前端技术；
+                            </p>
+                        </div>
+                        <div class="work-exp-list">
+                            <i class="work-exp-list-ico"></i>2017/02 - 2017/05
+                        </div>
+                        <div class="list-con">
+                            <h3>移动端性能优化</h3>
+                            <p>责任描述：主要负责移动端性能提升，减少对后台icon图片/图标请求；</p>
+                            <p>项目简介：该项目是移动端改版后针对性能提升的一次升级，在项目中我主要负责对代码库icon进行合并整理，构建雪碧图侍使前端页面请求减少从而达到优化的目的；</p>
+                        </div>
+                        <div class="work-exp-list">
+                            <i class="work-exp-list-ico"></i>2016/12 - 2017/01
+                        </div>
+                        <div class="list-con">
+                            <h3>龙珠频道开发</h3>2016/12-2017/01
+                            <p>责任描述：负责龙珠频道页面前端展示及相关功能开发；</p>
+                            <p>项目简介：该项目是pptv新增频道；根据龙珠部门提供数据接口对应展示各模块；</p>
+                        </div>
+                        <div class="work-exp-list">
+                            <i class="work-exp-list-ico"></i>2016/04 - 2016/05
+                        </div>
+                        <div class="list-con">
+                            <h3>大学生音乐节</h3>
+                            <p>责任描述：主要负责活动静态页面渲染及相关功能；</p>
+                        </div>
+                        
+                    </div>
+                </div>
             </div>
 
         </div>
     </div>
     <script src="../js/home.js"></script>
-    <script>
-        $(document).ready(function () {
-            // 工作经验hover效果
-            $('.W-tim-ul,.W-work-right ul').find('li').hover(function () {
-                $('.W-jie1').css('color', '#666');
-                $('.W-jie1').eq($(this).index()).css('color', '#6bc30d');
-                if ($(this).index() == 0) {
-                    xuanz1(0, '57px')
-                } else if ($(this).index() == 1) {
-                    xuanz1(1, '160px')
-                } else if ($(this).index() == 2) {
-                    xuanz1(2, '260px')
-                }
-            }, function () {
-                $('.W-jie1').css('color', '#666');
-                if ($(this).index() == 0) {
-                    xuanz2(0, '63px')
-                } else if ($(this).index() == 1) {
-                    xuanz2(1, '165px')
-                } else if ($(this).index() == 2) {
-                    xuanz2(2, '265px')
-                }
-            });
-
-            function xuanz1(n, top) {
-                $('.W-tim-ul li').find('span').eq(n).stop().animate({
-                    'border-width': '8px',
-                    'right': '-20px',
-                    'top': top
-                }, 100, 'linear')
-            }
-
-            function xuanz2(n, top) {
-                $('.W-tim-ul li').find('span').eq(n).stop().animate({
-                    'border-width': '2px',
-                    'right': '-14px',
-                    'top': top
-                })
-            };
-
-
-            var jinengLi = $('.jineng ul').children("li");
-            jinengLi.hover(function () {
-                var codeHtml = $(this).find('.bg').width();
-                var ParseInt =parseInt(codeHtml/$(this).width()*100)
-                $(this).find('code').html(ParseInt+'%');
-                $(this).find('code').stop().animate({
-                    'left':codeHtml+10
-                }, 300, 'linear')
-            }, function () {
-                $(this).find('code').stop().animate({
-                    'left':'380px'
-                }, 1500, 'linear')
-            });
-        });
-    </script>
 </body>
 
 </html>
