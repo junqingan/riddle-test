@@ -17,6 +17,7 @@ function start() {
             xuanz1(2, '260px')
         }
     }, function () {
+        $('.W-jie1').eq($(this).index()).css('color', '#666');
         if ($(this).index() == 0) {
             xuanz2(0, '63px')
         } else if ($(this).index() == 1) {
